@@ -27,8 +27,8 @@
       "chapter_name_ja": "アル＝バカラ",
       "chapter_name_en": "Al-Baqarah",
       "ayah_count_total": 286,
-      "ayah_count_included": 220,
-      "is_partial": true,
+      "ayah_count_included": 286,
+      "is_partial": false,
       "file": "data/chapters/surah-002-al-baqarah.json"
     }
   ]
