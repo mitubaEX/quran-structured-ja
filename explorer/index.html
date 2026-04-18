@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>クルアーン理解支援ビューア</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Quran Structured JA</p>
+          <h1>クルアーンを、理解支援データとして読む。</h1>
+          <p class="hero-lead">
+            このページは、クルアーン本文の置き換えではなく、章・節ごとの理解補助を現代日本語で整理して読むための静的ビューアです。
+            逐語寄り表現、自然な日本語表現、短い要約、注記、注意点を分けて扱います。
+          </p>
+        </div>
+        <aside class="hero-note">
+          <h2>利用上の前提</h2>
+          <ul>
+            <li>原典そのものを改変する意図はありません。</li>
+            <li>注記と caution は、解釈差や配慮が必要な点を分けるための欄です。</li>
+            <li>現在は第1章アル＝ファーティハを収録しています。</li>
+          </ul>
+        </aside>
+      </header>
+
+      <main class="layout">
+        <section class="panel controls-panel">
+          <div class="section-heading split">
+            <div>
+              <p class="section-kicker">Browse</p>
+              <h2>章と節をたどる</h2>
+            </div>
+            <button id="clear-filters" class="text-button" type="button">条件をクリア</button>
+          </div>
+          <div class="controls-grid">
+            <label class="field">
+              <span>章</span>
+              <select id="chapter-select"></select>
+            </label>
+            <label class="field search-field">
+              <span>キーワード</span>
+              <input id="search-input" type="search" placeholder="慈悲、導き、祈り、賛美 など" autocomplete="off" />
+            </label>
+          </div>
+          <div class="tag-row">
+            <span class="inline-label">テーマ</span>
+            <div id="tag-cloud" class="tag-cloud"></div>
+          </div>
+          <div id="active-filters" class="active-filters"></div>
+        </section>
+
+        <section class="panel chapter-panel">
+          <div id="chapter-summary"></div>
+        </section>
+
+        <section class="panel list-panel">
+          <div class="section-heading split">
+            <div>
+              <p class="section-kicker">Ayahs</p>
+              <h2>節の一覧</h2>
+            </div>
+            <p id="result-count" class="result-count"></p>
+          </div>
+          <div id="ayah-list" class="ayah-list"></div>
+        </section>
+
+        <aside class="panel detail-panel">
+          <div class="section-heading">
+            <p class="section-kicker">Detail</p>
+            <h2>節の詳細</h2>
+          </div>
+          <div id="detail-content" class="detail-content"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

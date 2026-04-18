@@ -1,0 +1,35 @@
+{
+  "project": {
+    "title": "クルアーン理解支援データ",
+    "language": "ja",
+    "version": "0.2.0",
+    "policy_summary": [
+      "クルアーン本文の正式版や改変版を作るのではなく、理解支援のための構造化データとして扱う。",
+      "日本語フィールドは解説的・補助的な情報であり、唯一の正解訳を確定することを目的としない。",
+      "解釈差がありうる事項は notes または caution に切り分ける。",
+      "長大な章は段階的に取り込み、部分収録であることを明示する。"
+    ]
+  },
+  "included_surahs": [
+    {
+      "surah": 1,
+      "chapter_name_ar": "الفاتحة",
+      "chapter_name_ja": "アル＝ファーティハ",
+      "chapter_name_en": "Al-Fatihah",
+      "ayah_count_total": 7,
+      "ayah_count_included": 7,
+      "is_partial": false,
+      "file": "data/chapters/surah-001-al-fatiha.json"
+    },
+    {
+      "surah": 2,
+      "chapter_name_ar": "البقرة",
+      "chapter_name_ja": "アル＝バカラ",
+      "chapter_name_en": "Al-Baqarah",
+      "ayah_count_total": 286,
+      "ayah_count_included": 220,
+      "is_partial": true,
+      "file": "data/chapters/surah-002-al-baqarah.json"
+    }
+  ]
+}
